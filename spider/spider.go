@@ -1,1 +1,5 @@
 package spider
+
+func Go() {
+
+}
