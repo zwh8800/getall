@@ -1,0 +1,7 @@
+package: github.com/zwh8800/getall
+import:
+- package: github.com/jinzhu/gorm
+- package: github.com/PuerkitoBio/goquery
+- package: gopkg.in/go-playground/pool.v1
+- package: github.com/gosuri/uiprogress
+- package: github.com/asaskevich/EventBus

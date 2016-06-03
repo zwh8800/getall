@@ -1,0 +1,14 @@
+hash: f5acba552c2681ebb52d29c2ae4963cf5341a2d96d48fdfd30efada9708ce380
+updated: 2016-06-04T01:15:02.467365512+08:00
+imports:
+- name: github.com/asaskevich/EventBus
+  version: ab9e5ceb2cc1ca6f36a5813c928c534e837681c2
+- name: github.com/gosuri/uiprogress
+  version: a9f819bfc744fe70043abcc5a6cd0137a678e3d8
+- name: github.com/jinzhu/gorm
+  version: bf0e23607840019d62e32e87e9af48e881d74b1e
+- name: github.com/PuerkitoBio/goquery
+  version: aeecb06b1e04a72e7d3312468c5b92f6bb2f3459
+- name: gopkg.in/go-playground/pool.v1
+  version: 7f37f4c92e71475945ec7c4ed4b07a34bb7c1966
+devImports: []
