@@ -6,13 +6,13 @@ import (
 	"os/signal"
 	"syscall"
 
-	evbus "github.com/asaskevich/EventBus"
-
 	"github.com/zwh8800/getall/event"
+	"github.com/zwh8800/getall/spider"
+	_ "github.com/zwh8800/getall/ui"
 )
 
 func init() {
-	evbus.Subscribe(event.Finish, finish)
+	event.Server.Subscribe(event.Finish, finish)
 }
 
 func finish() {
@@ -31,7 +31,7 @@ func main() {
 }
 
 func startServices() {
-
+	spider.Go()
 }
 
 func handleSignal() {
@@ -41,5 +41,5 @@ func handleSignal() {
 }
 
 func stopServices() {
-
+	spider.Stop()
 }

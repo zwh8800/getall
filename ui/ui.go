@@ -52,7 +52,7 @@ func deleteProgressData(id int) {
 func startProgress(id int, name string) {
 	bar := progress.AddBar(100).AppendCompleted().PrependElapsed()
 	bar.PrependFunc(func(b *uiprogress.Bar) string {
-		return fmt.Sprintf("Task %s", name)
+		return fmt.Sprintf("Task #%d %s", id, name)
 	})
 	setProgressData(id, &progressData{
 		name: name,
@@ -69,7 +69,7 @@ func updateProgress(id int, progress int) {
 func finishProgress(id int) {
 	data := getProgressData(id)
 	data.bar.Set(100)
-	fmt.Fprintf(progress.Bypass(), "%s finished\n", data.name)
+	fmt.Fprintf(progress.Bypass(), "Task #%d %s finished\n", id, data.name)
 
 	deleteProgressData(id)
 }
